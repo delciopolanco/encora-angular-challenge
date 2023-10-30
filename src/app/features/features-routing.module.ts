@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TemplateComponent } from '../core/template/template.component';
+import { PATHS } from '../shared/utils';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '', redirectTo: PATHS.HOME, pathMatch: 'full' },
   {
-    path: 'login',
+    path: PATHS.LOGIN,
     loadChildren: () =>
       import('./public/public.module').then((m) => m.PublicModule),
   },
   {
-    path: 'home',
+    path: PATHS.HOME,
     component: TemplateComponent,
     children: [
       {

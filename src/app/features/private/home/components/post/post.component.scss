@@ -1,0 +1,39 @@
+.post {
+  justify-content: left;
+  gap: 1rem;
+  width: 2fr;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  &__title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    font-size: 0.8rem;
+    align-items: center;
+
+    &-id {
+      border-radius: 5px;
+      border: 1px solid #cecece;
+      padding: 10px;
+    }
+  }
+
+  &__body {
+    color: #232323;
+    font-weight: bold;
+
+    &-content {
+      font-size: 1rem;
+    }
+
+    &-user {
+      font-size: 0.8rem;
+      color: #cecece;
+    }
+  }
+}

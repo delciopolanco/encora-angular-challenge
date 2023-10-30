@@ -1,17 +1,17 @@
 .header {
   padding: 1rem;
-  background-color: #007c7c;
+  background-color: #00537c;
   color: white;
   text-align: center;
   height: 5rem;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto 1fr;
   justify-items: end;
+  align-items: center;
 
   button {
     background: red;
     padding: 1rem;
-    margin-right: 1rem;
     width: 10em;
   }
 }

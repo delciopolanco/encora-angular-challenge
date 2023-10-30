@@ -26,14 +26,21 @@
   &__body {
     color: #232323;
     font-weight: bold;
+    display: flex;
+    gap: 0.1rem;
+    flex-direction: column;
 
     &-content {
       font-size: 1rem;
     }
 
     &-user {
-      font-size: 0.8rem;
-      color: #cecece;
+      font-size: 12px;
+      color: #8e8888;
     }
   }
+}
+hr {
+  border-top: 0.5px solid #cecece;
+  opacity: 0.5;
 }

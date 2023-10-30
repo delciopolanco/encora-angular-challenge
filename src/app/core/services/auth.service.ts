@@ -15,4 +15,8 @@ export class AuthService {
   authenticate(user: User): void {
     localStorage.setItem('token', token(user.email));
   }
+
+  closeSession(): void {
+    localStorage.clear();
+  }
 }

@@ -1,5 +1,26 @@
 .header {
-  background-color: #4caf50;
+  padding: 1rem;
+  background-color: #007c7c;
   color: white;
   text-align: center;
+  height: 5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: end;
+
+  button {
+    background: red;
+    padding: 1rem;
+    margin-right: 1rem;
+    width: 10em;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  .header {
+    .button {
+      margin-right: 0;
+      padding: 1rem 0;
+    }
+  }
 }

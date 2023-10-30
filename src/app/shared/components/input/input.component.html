@@ -1,0 +1,13 @@
+<div class="group">
+  <label *ngIf="label" class="group__label" [for]="formControlName">{{
+    label
+  }}</label>
+  <input
+    [type]="type"
+    [id]="formControlName"
+    [placeholder]="placeholder"
+    [formControlName]="formControlName"
+    class="group__input"
+  />
+  <span *ngIf="hasError" class="group__help-block">{{ getError() }}</span>
+</div>

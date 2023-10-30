@@ -1,0 +1,53 @@
+.group {
+  margin-bottom: 0.5rem;
+  display: block;
+
+  &__label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+  }
+
+  &__input {
+    display: block;
+    min-width: 100%;
+    height: 3.5rem;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    -webkit-transition: border-color ease-in-out 0.15s,
+      box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -webkit-transition: border-color ease-in-out 0.15s,
+      -webkit-box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s,
+      -webkit-box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s,
+      -webkit-box-shadow ease-in-out 0.15s;
+
+    &.ng-touched.ng-pristine.ng-invalid {
+      border: 2px solid #c00001;
+    }
+
+    &.ng-valid {
+      border: 2px solid #1298c9;
+    }
+  }
+
+  &__help-block {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #c00001;
+    font-size: 0.8rem;
+  }
+}

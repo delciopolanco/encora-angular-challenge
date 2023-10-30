@@ -1,0 +1,18 @@
+<form [formGroup]="loginForm" (submit)="login()" class="container">
+  <app-input
+    [placeholder]="'Email'"
+    name="email"
+    [control]="loginForm.controls['email']"
+    [formControlName]="'email'"
+    [formGroup]="loginForm"
+  />
+  <app-input
+    [type]="'password'"
+    [placeholder]="'Password'"
+    name="password"
+    [formControlName]="'password'"
+    [control]="loginForm.controls['password']"
+    [formGroup]="loginForm"
+  />
+  <button type="submit">Iniciar sesión</button>
+</form>

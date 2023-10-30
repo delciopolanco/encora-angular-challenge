@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { User } from 'src/app/core/models';
 import { validateForm } from 'src/app/shared/utils';
 
 @Component({
@@ -9,7 +10,7 @@ import { validateForm } from 'src/app/shared/utils';
 })
 export class LoginFormComponent {
   loginForm: FormGroup;
-  @Output() onValid: EventEmitter<void> = new EventEmitter<void>();
+  @Output() onValid: EventEmitter<User> = new EventEmitter<User>();
 
   constructor(private readonly fb: FormBuilder) {
     this.loginForm = this.fb.group({
@@ -24,6 +25,6 @@ export class LoginFormComponent {
       return;
     }
 
-    this.onValid.emit();
+    this.onValid.emit(this.loginForm.value);
   }
 }

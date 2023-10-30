@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TemplateComponent } from '../core/template/template.component';
 import { PATHS } from '../shared/utils';
+import { IsAuthenticated } from '../core/guards';
 
 const routes: Routes = [
   { path: '', redirectTo: PATHS.HOME, pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   {
     path: PATHS.HOME,
     component: TemplateComponent,
+    canActivate: [IsAuthenticated],
     children: [
       {
         path: '',

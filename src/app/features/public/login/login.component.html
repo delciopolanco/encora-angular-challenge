@@ -1,6 +1,6 @@
 <div class="login-container">
   <div class="login-container__background"></div>
   <div class="login-container__form">
-    <app-login-form (onValid)="goToHome()"></app-login-form>
+    <app-login-form (onValid)="authenticate($event)"></app-login-form>
   </div>
 </div>

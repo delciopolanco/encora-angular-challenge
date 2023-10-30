@@ -1,42 +1,47 @@
-import { TestBed } from '@angular/core/testing';
 import { AuthService } from './auth.service';
 import { User } from '../models';
 
 describe('AuthService', () => {
-  let service: AuthService;
+  let authService: AuthService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [AuthService],
-    });
-    service = TestBed.inject(AuthService);
+    authService = new AuthService();
+    localStorage.clear();
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(authService).toBeTruthy();
   });
 
   it('should return true if user is authenticated', () => {
     localStorage.setItem('token', 'testToken');
-    expect(service.isAuthenticated()).toBeTruthy();
+
+    const isAuthenticated = authService.isAuthenticated();
+
+    expect(isAuthenticated).toBeTruthy();
   });
 
   it('should return false if user is not authenticated', () => {
-    localStorage.clear();
-    expect(service.isAuthenticated()).toBeFalsy();
+    const isAuthenticated = authService.isAuthenticated();
+
+    expect(isAuthenticated).toBeFalsy();
   });
 
   it('should authenticate user and store token in localStorage', () => {
-    const user: User = { email: 'test@example.com', password: '' };
-    service.authenticate(user);
+    const user: User = { email: 'test@example.com', password: 'password' };
+
+    authService.authenticate(user);
+
     const storedToken = localStorage.getItem('token');
     expect(storedToken).toBeDefined();
-    expect(storedToken).toEqual(jasmine.any(String));
+    expect(typeof storedToken).toBe('string');
   });
 
   it('should clear session data from localStorage', () => {
     localStorage.setItem('token', 'testToken');
-    service.closeSession();
+
+    authService.closeSession();
+
     const storedToken = localStorage.getItem('token');
     expect(storedToken).toBeNull();
   });

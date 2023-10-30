@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { PATHS } from 'src/app/shared/utils';
+import { PATHS } from '../../../shared/utils';
 import { AuthService } from '../../services/auth.service';
 
 @Component({

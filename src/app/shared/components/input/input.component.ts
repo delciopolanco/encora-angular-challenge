@@ -41,7 +41,7 @@ export const ErrorMessages: ErrorMessages = {
 })
 export class InputComponent {
   @Input() formControlName = '';
-  @Input() control!: AbstractControl;
+  @Input() control: AbstractControl = {} as AbstractControl;
   @Input() type: 'text' | 'password' = 'text';
   @Input() label = '';
   @Input() placeholder = '';

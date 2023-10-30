@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { token } from 'src/app/shared/utils';
+import { token } from '../../shared/utils';
 import { User } from '../models';
 
 @Injectable()

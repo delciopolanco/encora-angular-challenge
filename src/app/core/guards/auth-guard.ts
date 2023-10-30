@@ -1,7 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { AuthService } from '../services';
-import { PATHS } from 'src/app/shared/utils';
+import { PATHS } from '../../shared/utils';
 
 @Injectable()
 export class AuthGuardService {

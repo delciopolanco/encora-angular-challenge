@@ -7,5 +7,5 @@ import { Post } from 'src/app/core/models/post';
   styleUrls: ['./post.component.scss'],
 })
 export class PostComponent {
-  @Input() post!: Post;
+  @Input() post: Post = {} as Post;
 }
